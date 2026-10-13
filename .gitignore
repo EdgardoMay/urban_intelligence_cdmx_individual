@@ -1,0 +1,85 @@
+cat > .gitignore <<'EOF'
+# ============================================================
+# Python environments and cache
+# ============================================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+
+# ============================================================
+# Environment variables / credentials
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# RAW DATA - LOCAL ONLY
+# Never upload original datasets to Git
+# ============================================================
+data/raw/*
+!data/raw/.gitkeep
+
+# ============================================================
+# PROCESSED DATA
+# Reproducible from raw sources
+# ============================================================
+data/processed/*
+!data/processed/.gitkeep
+
+# ============================================================
+# Database / Docker local data
+# ============================================================
+postgres_data/
+pgdata/
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================================
+# Logs and temporary files
+# ============================================================
+*.log
+*.tmp
+*.temp
+outputs/logs/*
+!outputs/logs/.gitkeep
+
+# ============================================================
+# Operating system metadata
+# ============================================================
+.DS_Store
+.DS_Store*
+Thumbs.db
+*:Zone.Identifier
+*:Zone.Identifier:Zone.Identifier
+*:Zone.Identifier*
+
+# ============================================================
+# IDEs
+# ============================================================
+.idea/
+
+# VS Code project configuration
+# Uncomment if you do not want to version VS Code settings
+# .vscode/
+
+# ============================================================
+# Python build/package artifacts
+# ============================================================
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+EOF
